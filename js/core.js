@@ -1,0 +1,12 @@
+window.setTimeout(function() { $("canvas").addClass("<%= @color %>"); }, 6000);
+window.setTimeout(function() { $("canvas").removeClass("<%= @color %>"); }, 10000);
+window.setTimeout(function() { $(".suit").addClass("active"); }, 15000);
+window.setTimeout(function() { $(".suit").removeClass("active"); }, 25000);
+window.setTimeout(function() { $(".reveal").addClass("visible"); }, 30000);
+window.setTimeout(function() { $(".name").addClass("visible"); }, 32000);
+window.setTimeout(function() { $(".chose").addClass("visible"); }, 34000);
+window.setTimeout(function() { $(".name").removeClass("visible"); }, 38000);
+window.setTimeout(function() { $(".chose").removeClass("visible"); }, 38000);
+window.setTimeout(function() { $(".card").addClass("visible"); }, 41000);
+window.setTimeout(function() { $(".card").removeClass("visible"); }, 48000);
+window.setTimeout(function() { $(".reveal").removeClass("visible"); }, 48000);

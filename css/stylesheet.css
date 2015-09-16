@@ -1,0 +1,114 @@
+.crystal_ball {
+        width: 750px;
+    margin: 0 auto;
+        right: -15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    font-family: 'Amatic SC', cursive;
+    background: rgba(0,0,0, .7);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+
+.reveal .name {
+	margin-top:190px;
+    font-size: 12em;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal .chose {
+    font-size: 8.5em;
+    color: white;
+    text-align: center;
+    margin-top: -50px;
+    opacity: 0;
+    transition: 2s all ease;
+}	
+
+.reveal .card {
+	text-align: center;
+	color: white;
+	position: absolute;
+	margin-top: 80px;
+	top:0;
+	width: 100%;
+	opacity: 0;
+	transition: 4s all ease;
+}
+
+.reveal .card div {
+	margin-top: -40px;
+}
+
+.suit {
+	font-size: 18em;
+	top:90px;
+    position: absolute;
+    color: black;
+    opacity: 0;
+    left: 300px;
+}
+
+.visible {
+    opacity: 1 !important;
+}
+
+html {
+    background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wood.png);
+}
+
+#myCanvas{
+    background:black;
+}
+
+canvas{
+    border-radius: 50%;
+        overflow:hidden;
+        margin-top: 15px;
+    border: 20px solid white;
+    transition: 1.5s all ease;
+}
+
+canvas.red {
+	border-color: red !important;
+}
+
+canvas.black {
+	border-color: black !important;
+}
+
+
+
+
+@keyframes drop {
+	25% { transform: rotate(-90deg); opacity: 1;} 
+	70% { transform: rotate(40deg); transform-origin: -50% center; opacity: .5 }
+	80% { transform: rotate(60deg); transform-origin: -50% center; opacity: 0
+		;}
+	100% { opacity: 0;}
+/*	80% { transform: rotate(120deg); transform-origin: -50% bottom; } 
+	100% { transform: rotate(40deg); transform-origin: -50% bottom; }  */   
+}
+
+/* The element to apply the animation to */
+.suit.active {
+    -webkit-animation-name: drop;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    transition: 1s all ease;
+    transform-origin: 150% center; 
+}
